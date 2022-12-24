@@ -1,0 +1,38 @@
+{
+    "plugins": [
+        // latex用プラグインを有効化 これは絶対必要
+        "latex2e"
+    ],
+    "filters": {
+        "allowlist": {
+        "allow": ["-Path"]
+        },
+        "comments": true
+    },
+    "rules": {
+        "preset-ja-spacing": {
+        "ja-space-between-half-and-full-width": {
+            "space": "always"
+        }
+        },
+        "preset-ja-technical-writing": {
+        "no-mix-dearu-desumasu": {
+            "preferInHeader": "である", // ;"である" or "ですます"
+            "preferInBody": "である", // ;"である" or "ですます"
+            "preferInList": "である", // ;"である" or "ですます"
+            // 文末以外でも、敬体(ですます調)と常体(である調)を厳しくチェックするかどうか
+            "strict": true
+        },
+        "ja-no-mixed-period": {
+            "periodMark": "．" // ピリオドで終わっていてもエラーが出ないように
+        },
+        "max-kanji-continuous-len": false,
+        "no-unmatched-pair": false, // tex の括弧を上手く検査してくれないので弾いた
+        "sentence-length": false
+        },
+        "spellcheck-tech-word": true,
+        "prh": {
+        "rulePaths": ["./prh.yml"]
+        }
+    }
+}

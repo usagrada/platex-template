@@ -1,0 +1,12 @@
+version: 1
+rules:
+  - expected: ，
+    pattern:
+      - 、
+  - expected: ．
+    pattern:
+    - 。
+  # 全角スペースを半角スペースに
+  - expected: " "
+    pattern:
+    - "　"
